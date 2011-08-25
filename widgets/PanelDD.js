@@ -2,14 +2,16 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
-/* // Internal developer documentation -- will not show up in API docs
+// Internal developer documentation -- will not show up in API docs
+/**
  * @class Ext.dd.PanelProxy
  * A custom drag proxy implementation specific to {@link Ext.Panel}s. This class is primarily used internally
  * for the Panel's drag drop implementation, and should never need to be created directly.
+ * @private
  * @constructor
  * @param panel The {@link Ext.Panel} to proxy for
  * @param config Configuration options

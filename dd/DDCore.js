@@ -2,7 +2,7 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -111,7 +111,7 @@ Ext.dd.DragDrop.prototype = {
 
     /**
      * An object who's property names identify HTML tags to be considered invalid as drag handles.
-     * A non-null property value identifies the tag as invalid. Defaults to the 
+     * A non-null property value identifies the tag as invalid. Defaults to the
      * following value which prevents drag operations from being initiated by &lt;a> elements:<pre><code>
 {
     A: "A"
@@ -1666,7 +1666,7 @@ Ext.dd.DragDropMgr = function() {
                 // so clean up first to avoid breaking the next drag
                 this.handleMouseUp(e);
             }
-            
+
             this.currentTarget = e.getTarget();
             this.dragCurrent = oDD;
 
@@ -2262,8 +2262,7 @@ Ext.dd.DragDropMgr = function() {
 
         /**
          * Inner class for cached elements
-         * @class DragDropMgr.ElementWrapper
-         * @for DragDropMgr
+         * @class Ext.dd.DragDropMgr.ElementWrapper
          * @private
          * @deprecated
          */

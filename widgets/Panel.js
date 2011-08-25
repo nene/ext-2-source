@@ -112,7 +112,7 @@ new Ext.Panel({
      * <p>The top toolbar of the panel. This can be either an {@link Ext.Toolbar} object or an array of
      * buttons/button configs to be added to the toolbar.  Note that this is not available as a property after render.
      * To access the top toolbar after render, use {@link #getTopToolbar}.</p>
-     * <p><b>Note:</b> Although a Toolbar may contain Field components, these will <b>not<b> be updated by a load
+     * <p><b>Note:</b> Although a Toolbar may contain Field components, these will <b>not</b> be updated by a load
      * of an ancestor FormPanel. A Panel's toolbars are not part of the standard Container->Component hierarchy, and
      * so are not scanned to collect form items. Hoverver, the values <b>will</b> be submitted because form
      * submission parameters are collected from the DOM tree.</p>
@@ -122,7 +122,7 @@ new Ext.Panel({
      * <p>The bottom toolbar of the panel. This can be either an {@link Ext.Toolbar} object or an array of
      * buttons/button configs to be added to the toolbar.  Note that this is not available as a property after render.
      * To access the bottom toolbar after render, use {@link #getBottomToolbar}.</p>
-     * <p><b>Note:</b> Although a Toolbar may contain Field components, these will <b>not<b> be updated by a load
+     * <p><b>Note:</b> Although a Toolbar may contain Field components, these will <b>not</b> be updated by a load
      * of an ancestor FormPanel. A Panel's toolbars are not part of the standard Container->Component hierarchy, and
      * so are not scanned to collect form items. Hoverver, the values <b>will</b> be submitted because form
      * submission parameters are collected from the DOM tree.</p>
@@ -390,8 +390,8 @@ new Ext.Panel({
     /**
      * @cfg {Boolean} disabled
      * Render this panel disabled (default is false). An important note when using the disabled config on panels is
-     * that IE will often fail to initialize the disabled mask element correectly if the panel's layout has not yet 
-     * completed by the time the Panel is disabled during the render process. If you experience this issue, you may 
+     * that IE will often fail to initialize the disabled mask element correectly if the panel's layout has not yet
+     * completed by the time the Panel is disabled during the render process. If you experience this issue, you may
      * need to instead use the {@link afterlayout} event to initialize the disabled state:
      * <pre><code>
 new Ext.Panel({
@@ -409,13 +409,13 @@ new Ext.Panel({
      */
     /**
      * @cfg {Boolean} autoHeight
-     * True to use height:'auto', false to use fixed height (defaults to false). <b>Note</b>: Setting autoHeight:true 
-     * means that the browser will manage the panel's height based on its contents, and that Ext will not manage it at 
+     * True to use height:'auto', false to use fixed height (defaults to false). <b>Note</b>: Setting autoHeight:true
+     * means that the browser will manage the panel's height based on its contents, and that Ext will not manage it at
      * all. If the panel is within a layout that manages dimensions (fit, border, etc.) then setting autoHeight:true
      * can cause issues with scrolling and will not generally work as expected since the panel will take on the height
      * of its contents rather than the height required by the Ext layout.
      */
-    
+
 
     /**
     * @cfg {String} baseCls
@@ -1214,7 +1214,7 @@ new Ext.Panel({
                 }else if(h == 'auto'){
                     this.body.setHeight(h);
                 }
-                
+
                 if(this.disabled && this.el._mask){
                     this.el._mask.setSize(this.el.dom.clientWidth, this.el.getHeight());
                 }
@@ -1449,7 +1449,7 @@ panel.load({
         }
         u.update(typeof this.autoLoad == 'object' ? this.autoLoad : {url: this.autoLoad});
     },
-    
+
     /**
      * Retrieve a tool by id.
      * @param {String} id

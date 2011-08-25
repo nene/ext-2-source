@@ -551,7 +551,7 @@ dt = Date.parseDate("2006-02-29 03:20:01", "Y-m-d H:i:s", true); // returns null
      * @param {String} input The raw date string.
      * @param {String} format The expected date string format.
      * @param {Boolean} strict (optional) True to validate date strings while parsing (i.e. prevents javascript Date "rollover")
-                        (defaults to false). Invalid date strings will return null when parsed.
+     * (defaults to false). Invalid date strings will return null when parsed.
      * @return {Date} The parsed Date.
      * @static
      */

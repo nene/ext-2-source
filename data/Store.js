@@ -100,7 +100,7 @@ Ext.data.Store = function(config){
     this.addEvents(
         /**
          * @event datachanged
-         * Fires when the data cache has changed in a bulk manner (e.g., it has been sorted, filtered, etc.) and a 
+         * Fires when the data cache has changed in a bulk manner (e.g., it has been sorted, filtered, etc.) and a
          * widget that is using this Store as a Record cache should refresh its view.
          * @param {Store} this
          */
@@ -220,7 +220,7 @@ Ext.extend(Ext.data.Store, Ext.util.Observable, {
     * on any HTTP request
     */
     /**
-    * @cfg {Object} sortInfo A config object in the format: {field: "fieldName", direction: "ASC|DESC"} to 
+    * @cfg {Object} sortInfo A config object in the format: {field: "fieldName", direction: "ASC|DESC"} to
     * specify the sort order in the request of a remote Store's {@link #load} operation.  Note that for
     * local sorting, the direction property is case-sensitive.
     */
@@ -310,13 +310,13 @@ Ext.extend(Ext.data.Store, Ext.util.Observable, {
             this.fireEvent("remove", this, record, index);
         }
     },
-    
+
     /**
      * Remove a Record from the Store at the specified index. Fires the {@link #remove} event.
      * @param {Number} index The index of the record to remove.
      */
     removeAt : function(index){
-        this.remove(this.getAt(index));    
+        this.remove(this.getAt(index));
     },
 
     /**
@@ -532,8 +532,8 @@ Ext.extend(Ext.data.Store, Ext.util.Observable, {
     /**
      * Returns an object describing the current sort state of this Store.
      * @return {Object} The sort state of the Store. An object with two properties:<ul>
-     * <li><b>field : String<p class="sub-desc">The name of the field by which the Records are sorted.</p></li>
-     * <li><b>direction : String<p class="sub-desc">The sort order, "ASC" or "DESC" (case-sensitive).</p></li>
+     * <li><b>field</b> : String<p class="sub-desc">The name of the field by which the Records are sorted.</p></li>
+     * <li><b>direction</b> : String<p class="sub-desc">The sort order, "ASC" or "DESC" (case-sensitive).</p></li>
      * </ul>
      */
     getSortState : function(){

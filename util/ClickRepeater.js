@@ -2,7 +2,7 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -22,14 +22,9 @@
  @cfg {Number} interval The interval between firings of the "click" event. Default 20 ms.
  @cfg {String} pressClass A CSS class name to be applied to the element while pressed.
  @cfg {Boolean} accelerate True if autorepeating should start slowly and accelerate.
-           "interval" and "delay" are ignored.
+ "interval" and "delay" are ignored.
  @cfg {Boolean} preventDefault True to prevent the default click event
  @cfg {Boolean} stopDefault True to stop the default click event
-
- @history
-    2007-02-02 jvs Original code contributed by Nige "Animal" White
-    2007-02-02 jvs Renamed to ClickRepeater
-    2007-02-03 jvs Modifications for FF Mac and Safari
 
  @constructor
  @param {Mixed} el The element to listen on
@@ -95,7 +90,7 @@ Ext.extend(Ext.util.ClickRepeater, Ext.util.Observable, {
         }
         this.disabled = false;
     },
-    
+
     /**
      * Disables the repeater and stops events from firing.
      */
@@ -110,31 +105,31 @@ Ext.extend(Ext.util.ClickRepeater, Ext.util.Observable, {
         }
         this.disabled = true;
     },
-    
+
     /**
      * Convenience function for setting disabled/enabled by boolean.
      * @param {Boolean} disabled
      */
     setDisabled: function(disabled){
-        this[disabled ? 'disable' : 'enable']();    
+        this[disabled ? 'disable' : 'enable']();
     },
-    
+
     eventOptions: function(e){
         if(this.preventDefault){
             e.preventDefault();
         }
         if(this.stopDefault){
             e.stopEvent();
-        }       
+        }
     },
-    
+
     // private
     destroy : function() {
         this.disable(true);
         Ext.destroy(this.el);
         this.purgeListeners();
     },
-    
+
     // private
     handleMouseDown : function(){
         clearTimeout(this.timer);

@@ -96,7 +96,7 @@ new Ext.FormPanel({
     focusClass : "x-form-focus",
     /**
      * @cfg {String/Boolean} validationEvent The event that should initiate field validation. Set to false to disable
-      automatic validation (defaults to "keyup").
+     * automatic validation (defaults to "keyup").
      */
     validationEvent : "keyup",
     /**

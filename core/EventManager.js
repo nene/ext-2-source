@@ -323,12 +323,12 @@ Ext.EventManager = function(){
             }
             docReadyEvent.addListener(fn, scope, options);
         },
-        
+
         // private
         doResizeEvent: function(){
             var h = D.getViewHeight(),
                 w = D.getViewWidth();
-            
+
             //whacky problem in IE where the resize event will fire even though the w/h are the same.
             if(curHeight != h || curWidth != w){
                 resizeEvent.fire(curWidth = w, curHeight = h);
@@ -861,7 +861,7 @@ Ext.EventObject = function(){
          * Gets the target for the event.
          * @param {String} selector (optional) A simple selector to filter the target or look for an ancestor of the target
          * @param {Number/Mixed} maxDepth (optional) The max depth to
-                search as a number or element (defaults to 10 || document.body)
+         * search as a number or element (defaults to 10 || document.body)
          * @param {Boolean} returnEl (optional) True to return a Ext.Element object instead of DOM node
          * @return {HTMLelement}
          */

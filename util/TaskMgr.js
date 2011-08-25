@@ -93,7 +93,7 @@ Ext.util.TaskRunner = function(interval){
      * @param {Object} task A config object that supports the following properties:<ul>
      * <li><code>run</code> : Function<div class="sub-desc">The function to execute each time the task is run. The
      * function will be called at each interval and passed the <code>args</code> argument if specified.  If a
-     * particular scope is required, be sure to specify it using the <code>scope</scope> argument.</div></li>
+     * particular scope is required, be sure to specify it using the <code>scope</code> argument.</div></li>
      * <li><code>interval</code> : Number<div class="sub-desc">The frequency in milliseconds with which the task
      * should be executed.</div></li>
      * <li><code>args</code> : Array<div class="sub-desc">(optional) An array of arguments to be passed to the function

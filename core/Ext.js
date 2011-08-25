@@ -798,7 +798,7 @@ btn.on('click', sayHi.createDelegate(btn, ['Fred']));
      * @param {Object} obj (optional) The object for which the scope is set
      * @param {Array} args (optional) Overrides arguments for the call. (Defaults to the arguments passed by the caller)
      * @param {Boolean/Number} appendArgs (optional) if True args are appended to call args instead of overriding,
-     *                                             if a number the args are inserted at the specified position
+     * if a number the args are inserted at the specified position
      * @return {Function} The new function
      */
     createDelegate : function(obj, args, appendArgs){
@@ -840,7 +840,7 @@ sayHi.defer(2000, this, ['Fred']);
      * @param {Object} obj (optional) The object for which the scope is set
      * @param {Array} args (optional) Overrides arguments for the call. (Defaults to the arguments passed by the caller)
      * @param {Boolean/Number} appendArgs (optional) if True args are appended to call args instead of overriding,
-     *                                             if a number the args are inserted at the specified position
+     * if a number the args are inserted at the specified position
      * @return {Number} The timeout id that can be used with clearTimeout
      */
     defer : function(millis, obj, args, appendArgs){

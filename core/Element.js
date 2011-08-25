@@ -342,7 +342,7 @@ El.prototype = {
      * Looks at parent nodes for a match of the passed simple selector (e.g. div.some-class or span:first-child)
      * @param {String} selector The simple selector to test
      * @param {Number/Mixed} maxDepth (optional) The max depth to
-            search as a number or element (defaults to 10 || document.body)
+     * search as a number or element (defaults to 10 || document.body)
      * @param {Boolean} returnEl (optional) True to return a Ext.Element object instead of DOM node
      * @return {HTMLElement} The matching DOM node (or null if no match was found)
      */
@@ -356,7 +356,7 @@ El.prototype = {
      * This is a shortcut for findParentNode() that always returns an Ext.Element.
      * @param {String} selector The simple selector to test
      * @param {Number/Mixed} maxDepth (optional) The max depth to
-            search as a number or element (defaults to 10 || document.body)
+     * search as a number or element (defaults to 10 || document.body)
      * @return {Ext.Element} The matching DOM node (or null if no match was found)
      */
     up : function(simpleSelector, maxDepth){
@@ -1351,20 +1351,21 @@ El.prototype = {
      * types of listeners:<br>
      * <br>
      * A delayed, one-time listener that auto stops the event and adds a custom argument (forumId) to the
-     * options object. The options object is available as the third parameter in the handler function.<div style="margin: 5px 20px 20px;">
+     * options object. The options object is available as the third parameter in the handler function.
+     * <div style="margin: 5px 20px 20px;">
      * Code:<pre><code>
 el.on('click', this.onClick, this, {
     single: true,
     delay: 100,
     stopEvent : true,
     forumId: 4
-});</code></pre></p>
+});</code></pre>
      * <p>
      * <b>Attaching multiple handlers in 1 call</b><br>
       * The method also allows for a single argument to be passed which is a config object containing properties
      * which specify multiple handlers.</p>
      * <p>
-     * Code:<pre><code></p>
+     * Code:<pre><code>
 el.on({
     'click' : {
         fn: this.onClick,
@@ -1382,7 +1383,7 @@ el.on({
 });</code></pre>
      * <p>
      * Or a shorthand syntax:<br>
-     * Code:<pre><code></p>
+     * Code:<pre><code>
 el.on({
     'click' : this.onClick,
     'mouseover' : this.onMouseOver,
@@ -2204,7 +2205,7 @@ el.alignTo("other-el", "c-bl", [-6, 0]);
 
     /**
      * Returns the sum width of the padding and borders for the passed "sides". See getBorderWidth()
-     for more information about the sides.
+     * for more information about the sides.
      * @param {String} sides
      * @return {Number}
      */
@@ -2733,8 +2734,11 @@ el.alignTo("other-el", "c-bl", [-6, 0]);
 
     /**
      * Convenience method for constructing a KeyMap
-     * @param {Number/Array/Object/String} key Either a string with the keys to listen for, the numeric key code, array of key codes or an object with the following options:
-     *                                  {key: (number or array), shift: (true/false), ctrl: (true/false), alt: (true/false)}
+     * @param {Number/Array/Object/String} key Either a string with the keys to listen for, the numeric key code,
+     * array of key codes or an object with the following options:
+     *
+     *     {key: (number or array), shift: (true/false), ctrl: (true/false), alt: (true/false)}
+     *
      * @param {Function} fn The function to call
      * @param {Object} scope (optional) The scope of the function
      * @return {Ext.KeyMap} The KeyMap created

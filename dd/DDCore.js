@@ -1207,7 +1207,6 @@ Ext.dd.DragDropMgr = function() {
          * @property ids
          * @type {string: string}
          * @private
-         * @static
          */
         ids: {},
 
@@ -1218,7 +1217,6 @@ Ext.dd.DragDropMgr = function() {
          * @property handleIds
          * @type {string: string}
          * @private
-         * @static
          */
         handleIds: {},
 
@@ -1227,7 +1225,6 @@ Ext.dd.DragDropMgr = function() {
          * @property dragCurrent
          * @type DragDrop
          * @private
-         * @static
          **/
         dragCurrent: null,
 
@@ -1236,7 +1233,6 @@ Ext.dd.DragDropMgr = function() {
          * @property dragOvers
          * @type Array
          * @private
-         * @static
          */
         dragOvers: {},
 
@@ -1245,7 +1241,6 @@ Ext.dd.DragDropMgr = function() {
          * @property deltaX
          * @type int
          * @private
-         * @static
          */
         deltaX: 0,
 
@@ -1254,7 +1249,6 @@ Ext.dd.DragDropMgr = function() {
          * @property deltaY
          * @type int
          * @private
-         * @static
          */
         deltaY: 0,
 
@@ -1264,7 +1258,6 @@ Ext.dd.DragDropMgr = function() {
          * false if you need the default behavior (not recommended)
          * @property preventDefault
          * @type boolean
-         * @static
          */
         preventDefault: true,
 
@@ -1275,7 +1268,6 @@ Ext.dd.DragDropMgr = function() {
          * mouse click.
          * @property stopPropagation
          * @type boolean
-         * @static
          */
         stopPropagation: true,
 
@@ -1284,7 +1276,6 @@ Ext.dd.DragDropMgr = function() {
          * intialized
          * @property initialized
          * @private
-         * @static
          */
         initialized: false,
 
@@ -1292,7 +1283,6 @@ Ext.dd.DragDropMgr = function() {
          * All drag and drop can be disabled.
          * @property locked
          * @private
-         * @static
          */
         locked: false,
 
@@ -1300,7 +1290,6 @@ Ext.dd.DragDropMgr = function() {
          * Called the first time an element is registered.
          * @method init
          * @private
-         * @static
          */
         init: function() {
             this.initialized = true;
@@ -1311,7 +1300,6 @@ Ext.dd.DragDropMgr = function() {
          * location of the cursor during the drag/drop
          * @property POINT
          * @type int
-         * @static
          */
         POINT: 0,
 
@@ -1320,7 +1308,6 @@ Ext.dd.DragDropMgr = function() {
          * overlap of two or more drag and drop objects.
          * @property INTERSECT
          * @type int
-         * @static
          */
         INTERSECT: 1,
 
@@ -1328,7 +1315,6 @@ Ext.dd.DragDropMgr = function() {
          * The current drag and drop mode.  Default: POINT
          * @property mode
          * @type int
-         * @static
          */
         mode: 0,
 
@@ -1336,7 +1322,6 @@ Ext.dd.DragDropMgr = function() {
          * Runs method on all drag and drop objects
          * @method _execOnAll
          * @private
-         * @static
          */
         _execOnAll: function(sMethod, args) {
             for (var i in this.ids) {
@@ -1354,7 +1339,6 @@ Ext.dd.DragDropMgr = function() {
          * Drag and drop initialization.  Sets up the global event handlers
          * @method _onLoad
          * @private
-         * @static
          */
         _onLoad: function() {
 
@@ -1373,7 +1357,6 @@ Ext.dd.DragDropMgr = function() {
          * Reset constraints on all drag and drop objs
          * @method _onResize
          * @private
-         * @static
          */
         _onResize: function(e) {
             this._execOnAll("resetConstraints", []);
@@ -1382,14 +1365,12 @@ Ext.dd.DragDropMgr = function() {
         /**
          * Lock all drag and drop functionality
          * @method lock
-         * @static
          */
         lock: function() { this.locked = true; },
 
         /**
          * Unlock all drag and drop functionality
          * @method unlock
-         * @static
          */
         unlock: function() { this.locked = false; },
 
@@ -1397,7 +1378,6 @@ Ext.dd.DragDropMgr = function() {
          * Is drag and drop locked?
          * @method isLocked
          * @return {boolean} True if drag and drop is locked, false otherwise.
-         * @static
          */
         isLocked: function() { return this.locked; },
 
@@ -1406,7 +1386,6 @@ Ext.dd.DragDropMgr = function() {
          * initiated, cleared when the drag is finished.
          * @property locationCache
          * @private
-         * @static
          */
         locationCache: {},
 
@@ -1415,7 +1394,6 @@ Ext.dd.DragDropMgr = function() {
          * drag and drop linked element constantly during a drag.
          * @property useCache
          * @type boolean
-         * @static
          */
         useCache: true,
 
@@ -1424,7 +1402,6 @@ Ext.dd.DragDropMgr = function() {
          * mousedown before the drag is initiated.  Default=3;
          * @property clickPixelThresh
          * @type int
-         * @static
          */
         clickPixelThresh: 3,
 
@@ -1433,7 +1410,6 @@ Ext.dd.DragDropMgr = function() {
          * drag if we don't get a mouseup event. Default=1000
          * @property clickTimeThresh
          * @type int
-         * @static
          */
         clickTimeThresh: 350,
 
@@ -1443,7 +1419,6 @@ Ext.dd.DragDropMgr = function() {
          * @property dragThreshMet
          * @type boolean
          * @private
-         * @static
          */
         dragThreshMet: false,
 
@@ -1452,7 +1427,6 @@ Ext.dd.DragDropMgr = function() {
          * @property clickTimeout
          * @type Object
          * @private
-         * @static
          */
         clickTimeout: null,
 
@@ -1462,7 +1436,6 @@ Ext.dd.DragDropMgr = function() {
          * @property startX
          * @type int
          * @private
-         * @static
          */
         startX: 0,
 
@@ -1472,7 +1445,6 @@ Ext.dd.DragDropMgr = function() {
          * @property startY
          * @type int
          * @private
-         * @static
          */
         startY: 0,
 
@@ -1482,7 +1454,6 @@ Ext.dd.DragDropMgr = function() {
          * @method regDragDrop
          * @param {DragDrop} oDD the DragDrop object to register
          * @param {String} sGroup the name of the group this element belongs to
-         * @static
          */
         regDragDrop: function(oDD, sGroup) {
             if (!this.initialized) { this.init(); }
@@ -1498,7 +1469,6 @@ Ext.dd.DragDropMgr = function() {
          * by DragDrop.removeFromGroup, so don't call this function directly.
          * @method removeDDFromGroup
          * @private
-         * @static
          */
         removeDDFromGroup: function(oDD, sGroup) {
             if (!this.ids[sGroup]) {
@@ -1516,7 +1486,6 @@ Ext.dd.DragDropMgr = function() {
          * DragDrop.unreg, use that method instead of calling this directly.
          * @method _remove
          * @private
-         * @static
          */
         _remove: function(oDD) {
             for (var g in oDD.groups) {
@@ -1534,7 +1503,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {String} sDDId the DragDrop id this element is a handle for
          * @param {String} sHandleId the id of the element that is the drag
          * handle
-         * @static
          */
         regHandle: function(sDDId, sHandleId) {
             if (!this.handleIds[sDDId]) {
@@ -1550,7 +1518,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {String} id the element id to check
          * @return {boolean} true if this element is a DragDrop item,
          * false otherwise
-         * @static
          */
         isDragDrop: function(id) {
             return ( this.getDDById(id) ) ? true : false;
@@ -1563,7 +1530,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {DragDrop} p_oDD the obj to get related data for
          * @param {boolean} bTargetsOnly if true, only return targetable objs
          * @return {DragDrop[]} the related instances
-         * @static
          */
         getRelated: function(p_oDD, bTargetsOnly) {
             var oDDs = [];
@@ -1590,7 +1556,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {DragDrop} the target
          * @return {boolean} true if the target is a legal target for the
          * dd obj
-         * @static
          */
         isLegalTarget: function (oDD, oTargetDD) {
             var targets = this.getRelated(oDD, true);
@@ -1612,7 +1577,6 @@ Ext.dd.DragDropMgr = function() {
          * @method isTypeOfDD
          * @param {Object} the object to evaluate
          * @return {boolean} true if typeof oDD = DragDrop
-         * @static
          */
         isTypeOfDD: function (oDD) {
             return (oDD && oDD.__ygDragDrop);
@@ -1625,7 +1589,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {String} id the element id to check
          * @return {boolean} true if this element is a DragDrop handle, false
          * otherwise
-         * @static
          */
         isHandle: function(sDDId, sHandleId) {
             return ( this.handleIds[sDDId] &&
@@ -1637,7 +1600,6 @@ Ext.dd.DragDropMgr = function() {
          * @method getDDById
          * @param {String} id the id of the DragDrop object
          * @return {DragDrop} the drag drop object, null if it is not found
-         * @static
          */
         getDDById: function(id) {
             for (var i in this.ids) {
@@ -1655,7 +1617,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {Event} e the event
          * @param oDD the DragDrop object being dragged
          * @private
-         * @static
          */
         handleMouseDown: function(e, oDD) {
             if(Ext.QuickTips){
@@ -1695,7 +1656,6 @@ Ext.dd.DragDropMgr = function() {
          * @method startDrag
          * @param x {int} the X position of the original mousedown
          * @param y {int} the Y position of the original mousedown
-         * @static
          */
         startDrag: function(x, y) {
             clearTimeout(this.clickTimeout);
@@ -1712,7 +1672,6 @@ Ext.dd.DragDropMgr = function() {
          * @method handleMouseUp
          * @param {Event} e the event
          * @private
-         * @static
          */
         handleMouseUp: function(e) {
 
@@ -1740,7 +1699,6 @@ Ext.dd.DragDropMgr = function() {
          * features are turned on.
          * @method stopEvent
          * @param {Event} e the event as returned by this.getEvent()
-         * @static
          */
         stopEvent: function(e){
             if(this.stopPropagation) {
@@ -1758,7 +1716,6 @@ Ext.dd.DragDropMgr = function() {
          * @method stopDrag
          * @param {Event} e the event
          * @private
-         * @static
          */
         stopDrag: function(e) {
             // Fire the drag end event for the item that was dragged
@@ -1787,7 +1744,6 @@ Ext.dd.DragDropMgr = function() {
          * @method handleMouseMove
          * @param {Event} e the event
          * @private
-         * @static
          */
         handleMouseMove: function(e) {
             if (! this.dragCurrent) {
@@ -1831,7 +1787,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {Event} e the event
          * @param {boolean} isDrop is this a drop op or a mouseover op?
          * @private
-         * @static
          */
         fireEvents: function(e, isDrop) {
             var dc = this.dragCurrent;
@@ -1970,7 +1925,6 @@ Ext.dd.DragDropMgr = function() {
          * @param  {DragDrop[]} dds The array of drag and drop objects
          * targeted
          * @return {DragDrop}       The best single match
-         * @static
          */
         getBestMatch: function(dds) {
             var winner = null;
@@ -2023,7 +1977,6 @@ Ext.dd.DragDropMgr = function() {
          * method could accept both.
          * @method refreshCache
          * @param {Object} groups an associative array of groups to refresh
-         * @static
          */
         refreshCache: function(groups) {
             for (var sGroup in groups) {
@@ -2057,7 +2010,6 @@ Ext.dd.DragDropMgr = function() {
          * @method verifyEl
          * @param {HTMLElement} el the element to check
          * @return {boolean} true if the element looks usable
-         * @static
          */
         verifyEl: function(el) {
             if (el) {
@@ -2086,7 +2038,6 @@ Ext.dd.DragDropMgr = function() {
          * @return {Ext.lib.Region} a Region object representing the total area
          *                             the element occupies, including any padding
          *                             the instance is configured for.
-         * @static
          */
         getLocation: function(oDD) {
             if (! this.isTypeOfDD(oDD)) {
@@ -2123,7 +2074,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {DragDrop} oTarget the DragDrop object we are inspecting
          * @return {boolean} true if the mouse is over the target
          * @private
-         * @static
          */
         isOverTarget: function(pt, oTarget, intersect) {
             // use cache if available
@@ -2179,7 +2129,6 @@ Ext.dd.DragDropMgr = function() {
          * unload event handler
          * @method _onUnload
          * @private
-         * @static
          */
         _onUnload: function(e, me) {
             Ext.dd.DragDropMgr.unregAll();
@@ -2189,7 +2138,6 @@ Ext.dd.DragDropMgr = function() {
          * Cleans up the drag and drop events and objects.
          * @method unregAll
          * @private
-         * @static
          */
         unregAll: function() {
 
@@ -2212,7 +2160,6 @@ Ext.dd.DragDropMgr = function() {
          * A cache of DOM elements
          * @property elementCache
          * @private
-         * @static
          */
         elementCache: {},
 
@@ -2223,7 +2170,6 @@ Ext.dd.DragDropMgr = function() {
          * @return {Ext.dd.DDM.ElementWrapper} the wrapped element
          * @private
          * @deprecated This wrapper isn't that useful
-         * @static
          */
         getElWrapper: function(id) {
             var oWrapper = this.elementCache[id];
@@ -2240,7 +2186,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {String} id the id of the elment to get
          * @return {Object} The element
          * @deprecated use Ext.lib.Ext.getDom instead
-         * @static
          */
         getElement: function(id) {
             return Ext.getDom(id);
@@ -2253,7 +2198,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {String} id the id of the elment to get
          * @return {Object} The style property of the element
          * @deprecated use Ext.lib.Dom instead
-         * @static
          */
         getCss: function(id) {
             var el = Ext.getDom(id);
@@ -2291,7 +2235,6 @@ Ext.dd.DragDropMgr = function() {
          * @return {int} the X coordinate
          * @for DragDropMgr
          * @deprecated use Ext.lib.Dom.getX instead
-         * @static
          */
         getPosX: function(el) {
             return Ext.lib.Dom.getX(el);
@@ -2303,7 +2246,6 @@ Ext.dd.DragDropMgr = function() {
          * @param el the element for which to get the position
          * @return {int} the Y coordinate
          * @deprecated use Ext.lib.Dom.getY instead
-         * @static
          */
         getPosY: function(el) {
             return Ext.lib.Dom.getY(el);
@@ -2315,7 +2257,6 @@ Ext.dd.DragDropMgr = function() {
          * @method swapNode
          * @param n1 the first node to swap
          * @param n2 the other node to swap
-         * @static
          */
         swapNode: function(n1, n2) {
             if (n1.swapNode) {
@@ -2339,7 +2280,6 @@ Ext.dd.DragDropMgr = function() {
          * Returns the current scroll position
          * @method getScroll
          * @private
-         * @static
          */
         getScroll: function () {
             var t, l, dde=document.documentElement, db=document.body;
@@ -2362,7 +2302,6 @@ Ext.dd.DragDropMgr = function() {
          * @param {string}      styleProp   the style property
          * @return {string} The value of the style property
          * @deprecated use Ext.lib.Dom.getStyle
-         * @static
          */
         getStyle: function(el, styleProp) {
             return Ext.fly(el).getStyle(styleProp);
@@ -2372,7 +2311,6 @@ Ext.dd.DragDropMgr = function() {
          * Gets the scrollTop
          * @method getScrollTop
          * @return {int} the document's scrollTop
-         * @static
          */
         getScrollTop: function () { return this.getScroll().top; },
 
@@ -2380,7 +2318,6 @@ Ext.dd.DragDropMgr = function() {
          * Gets the scrollLeft
          * @method getScrollLeft
          * @return {int} the document's scrollTop
-         * @static
          */
         getScrollLeft: function () { return this.getScroll().left; },
 
@@ -2390,7 +2327,6 @@ Ext.dd.DragDropMgr = function() {
          * @method moveToEl
          * @param {HTMLElement} moveEl      The element to move
          * @param {HTMLElement} targetEl    The position reference element
-         * @static
          */
         moveToEl: function (moveEl, targetEl) {
             var aCoord = Ext.lib.Dom.getXY(targetEl);
@@ -2400,7 +2336,6 @@ Ext.dd.DragDropMgr = function() {
         /**
          * Numeric array sort function
          * @method numericSort
-         * @static
          */
         numericSort: function(a, b) { return (a - b); },
 
@@ -2408,7 +2343,6 @@ Ext.dd.DragDropMgr = function() {
          * Internal counter
          * @property _timeoutCount
          * @private
-         * @static
          */
         _timeoutCount: 0,
 
@@ -2417,7 +2351,6 @@ Ext.dd.DragDropMgr = function() {
          * an error if this file is loaded before the Event Utility.
          * @method _addListeners
          * @private
-         * @static
          */
         _addListeners: function() {
             var DDM = Ext.dd.DDM;
@@ -2440,7 +2373,6 @@ Ext.dd.DragDropMgr = function() {
          * clicked.
          * @method handleWasClicked
          * @param node the html element to inspect
-         * @static
          */
         handleWasClicked: function(node, id) {
             if (this.isHandle(id, node.id)) {

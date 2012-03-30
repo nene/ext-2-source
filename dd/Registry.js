@@ -2,7 +2,7 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -13,8 +13,8 @@
  * @singleton
  */
 Ext.dd.Registry = function(){
-    var elements = {}; 
-    var handles = {}; 
+    var elements = {};
+    var handles = {};
     var autoIdSeed = 0;
 
     var getId = function(el, autogen){
@@ -28,11 +28,11 @@ Ext.dd.Registry = function(){
         }
         return id;
     };
-    
+
     return {
     /**
      * Resgister a drag drop element
-     * @param {String/HTMLElement) element The id or DOM node to register
+     * @param {String/HTMLElement} element The id or DOM node to register
      * @param {Object} data (optional) An custom data object that will be passed between the elements that are involved
      * in drag drop operations.  You can populate this object with any arbitrary properties that your own code
      * knows how to interpret, plus there are some specific properties known to the Registry that should be
@@ -66,7 +66,7 @@ isHandle   True if the element passed in triggers<br />
 
     /**
      * Unregister a drag drop element
-     * @param {String/HTMLElement) element The id or DOM node to unregister
+     * @param {String/HTMLElement} element The id or DOM node to unregister
      */
         unregister : function(el){
             var id = getId(el, false);

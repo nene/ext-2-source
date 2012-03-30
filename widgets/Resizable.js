@@ -2,14 +2,14 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
 /**
  * @class Ext.Resizable
  * @extends Ext.util.Observable
- * <p>Applies drag handles to an element to make it resizable. The drag handles are inserted into the element 
+ * <p>Applies drag handles to an element to make it resizable. The drag handles are inserted into the element
  * and positioned absolute. Some elements, such as a textarea or image, don't support this. To overcome that, you can wrap
  * the textarea in a div and set "resizeChild" to true (or to the id of the element), <b>or</b> set wrap:true in your config and
  * the element will be wrapped for you automatically.</p>
@@ -76,7 +76,7 @@ resizer.on("resize", myHandler);
   */
 Ext.Resizable = function(el, config){
     this.el = Ext.get(el);
-    
+
     if(config && config.wrap){
         config.resizeChild = this.el;
         this.el = this.el.wrap(typeof config.wrap == "object" ? config.wrap : {cls:"xresizable-wrap"});
@@ -97,7 +97,7 @@ Ext.Resizable = function(el, config){
      * The proxy Element that is resized in place of the real Element during the resize operation.
      * This may be queried using {@link Ext.Element#getBox} to provide the new area to resize to.
      * Read only.
-     * @type Ext.Element.
+     * @type Ext.Element
      * @property proxy
      */
     this.proxy = this.el.createProxy({tag: "div", cls: "x-resizable-proxy", id: this.el.id + "-rzproxy"}, Ext.getBody());
@@ -105,7 +105,7 @@ Ext.Resizable = function(el, config){
     this.proxy.enableDisplayMode('block');
 
     Ext.apply(this, config);
-    
+
     if(this.pinned){
         this.disableTrackOver = true;
         this.el.addClass("x-resizable-pinned");
@@ -134,13 +134,13 @@ Ext.Resizable = function(el, config){
     }
     // legacy
     this.corner = this.southeast;
-    
+
     if(this.handles.indexOf("n") != -1 || this.handles.indexOf("w") != -1){
         this.updateBox = true;
-    }   
-   
+    }
+
     this.activeHandle = null;
-    
+
     if(this.resizeChild){
         if(typeof this.resizeChild == "boolean"){
             this.resizeChild = Ext.get(this.el.dom.firstChild, true);
@@ -148,7 +148,7 @@ Ext.Resizable = function(el, config){
             this.resizeChild = Ext.get(this.resizeChild, true);
         }
     }
-    
+
     if(this.adjustments == "auto"){
         var rc = this.resizeChild;
         var hw = this.west, he = this.east, hn = this.north, hs = this.south;
@@ -159,22 +159,22 @@ Ext.Resizable = function(el, config){
         }
         this.adjustments = [
             (he ? -he.el.getWidth() : 0) + (hw ? -hw.el.getWidth() : 0),
-            (hn ? -hn.el.getHeight() : 0) + (hs ? -hs.el.getHeight() : 0) -1 
+            (hn ? -hn.el.getHeight() : 0) + (hs ? -hs.el.getHeight() : 0) -1
         ];
     }
-    
+
     if(this.draggable){
-        this.dd = this.dynamic ? 
+        this.dd = this.dynamic ?
             this.el.initDD(null) : this.el.initDDProxy(null, {dragElId: this.proxy.id});
         this.dd.setHandleElId(this.resizeChild ? this.resizeChild.id : this.el.id);
     }
-    
+
     // public events
     this.addEvents(
         "beforeresize",
         "resize"
     );
-    
+
     if(this.width !== null && this.height !== null){
         this.resizeTo(this.width, this.height);
     }else{
@@ -233,7 +233,7 @@ Ext.extend(Ext.Resizable, Ext.util.Observable, {
          * @param {Number} height The new height
          * @param {Ext.EventObject} e The mouseup event
          */
-    
+
     /**
      * Perform a manual resize
      * @param {Number} width
@@ -293,7 +293,7 @@ Ext.extend(Ext.Resizable, Ext.util.Observable, {
             e.stopEvent();
             this.activeHandle = handle;
             this.startSizing(e, handle);
-        }          
+        }
     },
 
     // private
@@ -403,11 +403,11 @@ new Ext.Panel({
     // private
     constrain : function(v, diff, m, mx){
         if(v - diff < m){
-            diff = v - m;    
+            diff = v - m;
         }else if(v - diff > mx){
-            diff = v - mx; 
+            diff = v - mx;
         }
-        return diff;                
+        return diff;
     },
 
     // private
@@ -429,16 +429,16 @@ new Ext.Panel({
             var mxw = this.maxWidth, mxh = this.maxHeight;
             var wi = this.widthIncrement;
             var hi = this.heightIncrement;
-            
+
             var eventXY = e.getXY();
             var diffX = -(this.startPoint[0] - Math.max(this.minX, eventXY[0]));
             var diffY = -(this.startPoint[1] - Math.max(this.minY, eventXY[1]));
-            
+
             var pos = this.activeHandle.position;
-            
+
             switch(pos){
                 case "east":
-                    w += diffX; 
+                    w += diffX;
                     w = Math.min(Math.max(mw, w), mxw);
                     break;
                 case "south":
@@ -446,7 +446,7 @@ new Ext.Panel({
                     h = Math.min(Math.max(mh, h), mxh);
                     break;
                 case "southeast":
-                    w += diffX; 
+                    w += diffX;
                     h += diffY;
                     w = Math.min(Math.max(mw, w), mxw);
                     h = Math.min(Math.max(mh, h), mxh);
@@ -462,7 +462,7 @@ new Ext.Panel({
                     w -= diffX;
                     break;
                 case "northeast":
-                    w += diffX; 
+                    w += diffX;
                     w = Math.min(Math.max(mw, w), mxw);
                     diffY = this.constrain(h, diffY, mh, mxh);
                     y += diffY;
@@ -484,7 +484,7 @@ new Ext.Panel({
                     w -= diffX;
                     break;
             }
-            
+
             var sw = this.snap(w, wi, mw);
             var sh = this.snap(h, hi, mh);
             if(sw != w || sh != h){
@@ -509,7 +509,7 @@ new Ext.Panel({
                 w = sw;
                 h = sh;
             }
-            
+
             if(this.preserveRatio){
                 switch(pos){
                     case "southeast":
@@ -560,7 +560,7 @@ new Ext.Panel({
                         y += th - h;
                          x += tw - w;
                        break;
-                        
+
                 }
             }
             this.proxy.setBounds(x, y, w, h);
@@ -584,7 +584,7 @@ new Ext.Panel({
             this.el.removeClass("x-resizable-over");
         }
     },
-    
+
     /**
      * Returns the element this component is bound to.
      * @return {Ext.Element}
@@ -592,7 +592,7 @@ new Ext.Panel({
     getEl : function(){
         return this.el;
     },
-    
+
     /**
      * Returns the resizeChild element (or null).
      * @return {Ext.Element}
@@ -600,9 +600,9 @@ new Ext.Panel({
     getResizeChild : function(){
         return this.resizeChild;
     },
-    
+
     /**
-     * Destroys this resizable. If the element was wrapped and 
+     * Destroys this resizable. If the element was wrapped and
      * removeEl is not true then the element remains.
      * @param {Boolean} removeEl (optional) true to remove the element from the DOM
      */
@@ -610,7 +610,7 @@ new Ext.Panel({
         Ext.destroy(this.dd, this.overlay, this.proxy);
         this.overlay = null;
         this.proxy = null;
-        
+
         var ps = Ext.Resizable.positions;
         for(var k in ps){
             if(typeof ps[k] != "function" && this[ps[k]]){
@@ -670,7 +670,7 @@ Ext.Resizable.Handle = function(rz, pos, disableTrackOver, transparent){
 Ext.Resizable.Handle.prototype = {
     // private
     afterResize : function(rz){
-        // do nothing    
+        // do nothing
     },
     // private
     onMouseDown : function(e){

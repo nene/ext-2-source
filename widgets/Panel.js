@@ -1055,7 +1055,7 @@ new Ext.Panel({
          * an instance of {@link Ext.dd.DragSource} which handles dragging the Panel.</p>
          * The developer must provide implementations of the abstract methods of {@link Ext.dd.DragSource}
          * in order to supply behaviour for each stage of the drag/drop process. See {@link #draggable}.
-         * @type Ext.dd.DragSource.
+         * @type Ext.dd.DragSource
          * @property dd
          */
         this.dd = new Ext.Panel.DD(this, typeof this.draggable == 'boolean' ? null : this.draggable);

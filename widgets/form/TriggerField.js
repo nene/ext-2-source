@@ -37,9 +37,6 @@ Ext.form.TriggerField = Ext.extend(Ext.form.TextField,  {
      * and appearance of the trigger.</p>
      */
     /**
-     * @cfg {String} triggerClass A CSS class to apply to the trigger
-     */
-    /**
      * @cfg {String/Object} autoCreate A DomHelper element spec, or true for a default element spec (defaults to
      * {tag: "input", type: "text", size: "16", autocomplete: "off"})
      */
@@ -50,7 +47,7 @@ Ext.form.TriggerField = Ext.extend(Ext.form.TextField,  {
     hideTrigger:false,
 
     /**
-     * @hide 
+     * @hide
      * @method autoSize
      */
     autoSize: Ext.emptyFn,
@@ -60,7 +57,7 @@ Ext.form.TriggerField = Ext.extend(Ext.form.TextField,  {
     deferHeight : true,
     // private
     mimicing : false,
-    
+
     actionMode: 'wrap',
 
     // private
@@ -183,7 +180,7 @@ Ext.form.TriggerField = Ext.extend(Ext.form.TextField,  {
         }
     },
 
-    beforeBlur : Ext.emptyFn, 
+    beforeBlur : Ext.emptyFn,
 
     // private
     // This should be overriden by any subclass that needs to check whether or not the field can be blurred.
@@ -221,6 +218,7 @@ Ext.form.TwinTriggerField = Ext.extend(Ext.form.TriggerField, {
      * trigger element must be marked by the CSS class <tt>x-form-trigger</tt>.</p>
      * <p>Note that when using this option, it is the developer's responsibility to ensure correct sizing, positioning
      * and appearance of the triggers.</p>
+     * @ignore
      */
     initComponent : function(){
         Ext.form.TwinTriggerField.superclass.initComponent.call(this);
@@ -262,7 +260,7 @@ Ext.form.TwinTriggerField = Ext.extend(Ext.form.TriggerField, {
         }, this);
         this.triggers = ts.elements;
     },
-    
+
     // private
     onDestroy : function() {
         Ext.destroy.apply(this, this.triggers);

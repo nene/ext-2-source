@@ -2,7 +2,7 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -93,9 +93,6 @@ Ext.Viewport = Ext.extend(Ext.Container, {
 	 */
     /**
      * @cfg {Mixed} renderTo @hide
-	 */
-    /**
-     * @cfg {Boolean} hideParent @hide
 	 */
     /**
      * @cfg {Number} height @hide

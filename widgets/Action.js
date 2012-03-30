@@ -221,9 +221,7 @@ Ext.Action.prototype = {
     /**
      * Executes this action manually using the default handler specified in the original config object.  Any arguments
      * passed to this function will be passed on to the handler function.
-     * @param {Mixed} arg1 (optional) Variable number of arguments passed to the handler function 
-     * @param {Mixed} arg2 (optional)
-     * @param {Mixed} etc... (optional)
+     * @param {Mixed...} args Variable number of arguments passed to the handler function 
      */
     execute : function(){
         this.initialConfig.handler.apply(this.initialConfig.scope || window, arguments);

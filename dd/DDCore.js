@@ -1575,7 +1575,7 @@ Ext.dd.DragDropMgr = function() {
          * "DragDrop" and not the name of the subclass.  So for now it just
          * evaluates a well-known variable in DragDrop.
          * @method isTypeOfDD
-         * @param {Object} the object to evaluate
+         * @param {Object} oDD the object to evaluate
          * @return {boolean} true if typeof oDD = DragDrop
          */
         isTypeOfDD: function (oDD) {

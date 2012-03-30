@@ -497,9 +497,7 @@ Ext.urlDecode("foo=1&bar=2&bar=3&bar=4", false); // returns {foo: "1", bar: ["2"
          * intended for arguments of type {@link Ext.Element} and {@link Ext.Component}, but any subclass of
          * {@link Ext.util.Observable} can be passed in.  Any number of elements and/or components can be
          * passed into this function in a single call as separate arguments.
-         * @param {Mixed} arg1 An {@link Ext.Element} or {@link Ext.Component} to destroy
-         * @param {Mixed} arg2 (optional)
-         * @param {Mixed} etc... (optional)
+         * @param {Mixed...} args An {@link Ext.Element} or {@link Ext.Component} to destroy
          */
         destroy : function(){
             for(var i = 0, a = arguments, len = a.length; i < len; i++) {

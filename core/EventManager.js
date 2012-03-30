@@ -922,7 +922,7 @@ Ext.getBody().on('click', function(e,t){
 </code></pre>
          * @param {Mixed} el The id, DOM element or Ext.Element to check
          * @param {Boolean} related (optional) true to test if the related target is within el instead of the target
-         * @param {Boolean} allowEl {optional} true to also check if the passed element is the target or related target
+         * @param {Boolean} allowEl (optional) true to also check if the passed element is the target or related target
          * @return {Boolean}
          */
         within : function(el, related, allowEl){

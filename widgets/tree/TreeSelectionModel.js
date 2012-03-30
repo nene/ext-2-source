@@ -2,7 +2,7 @@
  * Ext JS Library 2.3.0
  * Copyright(c) 2006-2009, Ext JS, LLC.
  * licensing@extjs.com
- * 
+ *
  * http://extjs.com/license
  */
 
@@ -13,7 +13,7 @@
  */
 Ext.tree.DefaultSelectionModel = function(config){
    this.selNode = null;
-   
+
    this.addEvents(
        /**
         * @event selectionchange
@@ -27,8 +27,8 @@ Ext.tree.DefaultSelectionModel = function(config){
         * @event beforeselect
         * Fires before the selected node changes, return false to cancel the change
         * @param {DefaultSelectionModel} this
-        * @param {TreeNode} node the new selection
-        * @param {TreeNode} node the old selection
+        * @param {TreeNode} newNode the new selection
+        * @param {TreeNode} oldNode the old selection
         */
        "beforeselect"
    );
@@ -43,11 +43,11 @@ Ext.extend(Ext.tree.DefaultSelectionModel, Ext.util.Observable, {
         tree.getTreeEl().on("keydown", this.onKeyDown, this);
         tree.on("click", this.onNodeClick, this);
     },
-    
+
     onNodeClick : function(node, e){
         this.select(node);
     },
-    
+
     /**
      * Select a node.
      * @param {TreeNode} node The node to select
@@ -67,7 +67,7 @@ Ext.extend(Ext.tree.DefaultSelectionModel, Ext.util.Observable, {
         }
         return node;
     },
-    
+
     /**
      * Deselect a node.
      * @param {TreeNode} node The node to unselect
@@ -75,9 +75,9 @@ Ext.extend(Ext.tree.DefaultSelectionModel, Ext.util.Observable, {
     unselect : function(node){
         if(this.selNode == node){
             this.clearSelections();
-        }    
+        }
     },
-    
+
     /**
      * Clear all selections
      */
@@ -90,22 +90,22 @@ Ext.extend(Ext.tree.DefaultSelectionModel, Ext.util.Observable, {
         }
         return n;
     },
-    
+
     /**
      * Get the selected node
      * @return {TreeNode} The selected node
      */
     getSelectedNode : function(){
-        return this.selNode;    
+        return this.selNode;
     },
-    
+
     /**
      * Returns true if the node is selected
      * @param {TreeNode} node The node to check
      * @return {Boolean}
      */
     isSelected : function(node){
-        return this.selNode == node;  
+        return this.selNode == node;
     },
 
     /**
@@ -226,7 +226,7 @@ Ext.extend(Ext.tree.MultiSelectionModel, Ext.util.Observable, {
         tree.getTreeEl().on("keydown", this.onKeyDown, this);
         tree.on("click", this.onNodeClick, this);
     },
-    
+
     onNodeClick : function(node, e){
         if(e.ctrlKey && this.isSelected(node)){
             this.unselect(node);
@@ -234,12 +234,12 @@ Ext.extend(Ext.tree.MultiSelectionModel, Ext.util.Observable, {
             this.select(node, e, e.ctrlKey);
         }
     },
-    
+
     /**
      * Select a node.
      * @param {TreeNode} node The node to select
      * @param {EventObject} e (optional) An event associated with the selection
-     * @param {Boolean} keepExisting True to retain existing selections
+     * @param {Boolean} keepExisting (optional) True to retain existing selections
      * @return {TreeNode} The selected node
      */
     select : function(node, e, keepExisting){
@@ -257,7 +257,7 @@ Ext.extend(Ext.tree.MultiSelectionModel, Ext.util.Observable, {
         this.fireEvent("selectionchange", this, this.selNodes);
         return node;
     },
-    
+
     /**
      * Deselect a node.
      * @param {TreeNode} node The node to unselect
@@ -274,7 +274,7 @@ Ext.extend(Ext.tree.MultiSelectionModel, Ext.util.Observable, {
             this.fireEvent("selectionchange", this, this.selNodes);
         }
     },
-    
+
     /**
      * Clear all selections
      */
@@ -291,22 +291,22 @@ Ext.extend(Ext.tree.MultiSelectionModel, Ext.util.Observable, {
             }
         }
     },
-    
+
     /**
      * Returns true if the node is selected
      * @param {TreeNode} node The node to check
      * @return {Boolean}
      */
     isSelected : function(node){
-        return this.selMap[node.id] ? true : false;  
+        return this.selMap[node.id] ? true : false;
     },
-    
+
     /**
      * Returns an array of the selected nodes
      * @return {Array}
      */
     getSelectedNodes : function(){
-        return this.selNodes;    
+        return this.selNodes;
     },
 
     onKeyDown : Ext.tree.DefaultSelectionModel.prototype.onKeyDown,

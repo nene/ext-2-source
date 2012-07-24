@@ -1,6 +1,6 @@
 {
     "--": ["core", "data", "dd", "state", "util", "widgets"],
-    "--title": "Sencha Docs - Ext JS 2.3",
+    "--title": "Ext JS 2.3 - Sencha Docs",
 
     "--local-storage-db": "ext-2",
     "--warnings": ["-link", "-link_ambiguous", "-no_doc", "-type_name", "-hide"],

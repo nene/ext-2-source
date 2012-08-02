@@ -12,14 +12,14 @@
  * A specialized store implementation that provides for grouping records by one of the available fields. This
  * is usually used in conjunction with an {@link Ext.grid.GroupingView} to proved the data model for
  * a grouped GridPanel.
- * @constructor
- * Creates a new GroupingStore.
- * @param {Object} config A config object containing the objects needed for the Store to access data,
- * and read the data into Records.
  */
 Ext.data.GroupingStore = Ext.extend(Ext.data.Store, {
-    
-    //inherit docs
+
+    /**
+     * Creates a new GroupingStore.
+     * @param {Object} config A config object containing the objects needed for the Store to access data,
+     * and read the data into Records.
+     */
     constructor: function(config){
         Ext.data.GroupingStore.superclass.constructor.call(this, config);
         this.applyGroupField();

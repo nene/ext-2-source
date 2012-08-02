@@ -292,6 +292,10 @@ var tabs = new Ext.TabPanel({
 
     // private config overrides
     elements: 'body',
+    /**
+     * @cfg {Boolean} headerAsText
+     * @hide
+     */
     headerAsText: false,
     frame: false,
     hideBorders:true,
@@ -970,10 +974,6 @@ var tabs = new Ext.TabPanel({
      */
     /**
      * @cfg {String} header
-     * @hide
-     */
-    /**
-     * @cfg {Boolean} headerAsText
      * @hide
      */
     /**

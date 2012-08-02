@@ -107,6 +107,9 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
 
     // private properties
     actionMode: 'wrap',
+    /**
+     * @cfg {String} validationEvent  @hide
+     */
     validationEvent : false,
     deferHeight: true,
     initialized : false,
@@ -1121,9 +1124,6 @@ Ext.form.HtmlEditor = Ext.extend(Ext.form.Field, {
      */
     /**
      * @cfg {String} validationDelay  @hide
-     */
-    /**
-     * @cfg {String} validationEvent  @hide
      */
     /**
      * @cfg {String} tabIndex  @hide

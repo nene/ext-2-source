@@ -1011,11 +1011,9 @@ var combo = new Ext.form.ComboBox({
     },
 
     /**
-     * @method onTriggerClick
+     * Implements the default empty TriggerField.onTriggerClick function
      * @hide
      */
-    // private
-    // Implements the default empty TriggerField.onTriggerClick function
     onTriggerClick : function(){
         if(this.disabled){
             return;

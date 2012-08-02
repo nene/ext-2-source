@@ -50,7 +50,6 @@ Ext.grid.EditorGridPanel = Ext.extend(Ext.grid.GridPanel, {
 	/**
 	 * @cfg {Boolean} trackMouseOver @hide
 	 */
-    // private
     trackMouseOver: false, // causes very odd FF errors
 
     // private

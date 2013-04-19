@@ -3,7 +3,15 @@
     "--title": "Ext JS 2.3 - Sencha Docs",
 
     "--local-storage-db": "ext-2",
-    "--warnings": ["-link", "-link_ambiguous", "-no_doc", "-type_name", "-hide"],
+    "--warnings": [
+        "-link",
+        "-link_ambiguous",
+        "-no_doc",
+        "-type_name",
+        "-hide",
+        "-html",
+        "-tag"
+    ],
     "--external": ["XMLHttpRequest"],
 
     "--footer": "Ext JS 2.3.0 Docs - Generated with <a href='https://github.com/senchalabs/jsduck'>JSDuck</a> {VERSION}. <a href='http://www.sencha.com/legal/terms-of-use/'>Terms of Use</a>",
